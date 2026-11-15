@@ -113,6 +113,31 @@ são salvos, e os experimentos de WIP × cv saem só em CSV.
 
 https://github.com/user-attachments/assets/dd318c32-9efa-46a7-bd9e-b965664abcc7
 
+## Referências
+
+**Factory Physics (Wallace Hopp e Mark Spearman).** Livro que trata a fábrica como um sistema de filas
+e fluxo, com poucas leis que valem para qualquer linha de produção. As principais:
+- **Lei de Little:** WIP = throughput × tempo de ciclo. Para produzir mais com o mesmo WIP, o ciclo cai; com mais WIP, o ciclo sobe.
+- **Gargalo:** o throughput máximo é o do recurso mais lento, e o WIP crítico é a quantidade mínima de lotes para saturá-lo.
+- **Variabilidade:** quanto maior, mais WIP e mais tempo de ciclo são necessários para o mesmo throughput. Não há almoço grátis: a variabilidade se compensa com capacidade, estoque ou tempo.
+- **CONWIP:** manter o WIP constante, liberando um novo lote só quando outro termina.
+
+O experimento de WIP × throughput × tempo de ciclo deste projeto reproduz essas curvas.
+
+**Scheduling: Theory, Algorithms, and Systems (Michael Pinedo).** Referência clássica de teoria de
+escalonamento: como atribuir tarefas a máquinas para otimizar um objetivo, como tempo total (makespan),
+atrasos ou número de tarefas atrasadas. Cobre os modelos de máquina única, máquinas paralelas, flow shop e
+job shop (a fábrica de chips é um job shop reentrante), as regras de despacho (FIFO, EDD, Critical Ratio...)
+e quais problemas são difíceis (NP-difíceis) e por isso resolvidos por heurísticas. Os prazos e atrasos do
+simulador seguem essa linha.
+
+### Por que isso importa, da nuvem à IA, passando pelo hardware e Devops
+Esses livros não criaram os sistemas de computação modernos, mas a base é a mesma: filas, fluxo e escalonamento.
+- **Nuvem e microsserviços:** a lei de Little vale para requisições (concorrência = vazão × latência). Perto da saturação a fila e a latência explodem, por isso se deixa folga de capacidade, e limites de concorrência, filas limitadas e backpressure fazem o papel do CONWIP.
+- **Escalonadores de jobs** (Kubernetes, Slurm, Borg): decidem quem usa qual máquina e em que ordem, o mesmo problema de despacho e de prazos que a Pinedo estuda.
+- **Inteligência artificial:** o treino distribuído em clusters de GPUs exige alocar jobs grandes e reservar vários aceleradores ao mesmo tempo. Na inferência, o batching troca latência por throughput, como as máquinas em batch do simulador.
+- **Hardware:** o próprio chip nasce numa fab, onde o tempo de ciclo vai de semanas a meses e cada wafer em processo é capital parado. A oferta de GPUs e CPUs depende de capacidade, WIP e variabilidade nessas fábricas.
+
 ## Estrutura
 
 ```
