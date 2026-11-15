@@ -111,7 +111,7 @@ são salvos, e os experimentos de WIP × cv saem só em CSV.
 
 ## Vídeo de demonstração 
 
-https://github.com/user-attachments/assets/dd318c32-9efa-46a7-bd9e-b965664abcc7
+[https://github.com/user-attachments/assets/dd318c32-9efa-46a7-bd9e-b965664abcc7](https://github.com/user-attachments/assets/6c88e3c9-d853-4961-82a6-3b15e7ad219d)
 
 ## Referências
 
