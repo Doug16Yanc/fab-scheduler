@@ -1,0 +1,406 @@
+/* =========================================
+   FAB SCHEDULER - DARK THEME
+   ========================================= */
+
+/* Fundo global e cores-base do Modena (controles sem estilo próprio herdam daqui) */
+.root {
+    -fx-background-color: #0B1120;
+    -fx-font-family: "Segoe UI", "Inter", sans-serif;
+    -fx-font-size: 13px;
+    -fx-base: #1E293B;
+    -fx-accent: #38BDF8;
+    -fx-focus-color: #38BDF8;
+    -fx-faint-focus-color: transparent;
+}
+
+/* Painel lateral */
+.side-panel {
+    -fx-background-color: #111827;
+    -fx-border-color: transparent transparent transparent #1F2A3D;
+    -fx-border-width: 0 0 0 1;
+}
+
+.label {
+    -fx-text-fill: #E2E8F0;
+}
+
+.title-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F8FAFC;
+}
+
+.section-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #64748B;
+}
+
+.clock-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #38BDF8;
+}
+
+.mono-label {
+    -fx-font-family: "Consolas", "Menlo", monospace;
+    -fx-text-fill: #CBD5E1;
+}
+
+.muted-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #94A3B8;
+}
+
+/* Divisórias */
+.separator .line {
+    -fx-border-color: #263449;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #1E293B;
+    -fx-border-color: #334155;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.combo-box:hover,
+.combo-box:focused {
+    -fx-border-color: #38BDF8;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #E2E8F0;
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #94A3B8;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #1E293B;
+    -fx-border-color: #334155;
+}
+
+.combo-box-popup .list-cell {
+    -fx-text-fill: #E2E8F0;
+    -fx-background-color: #1E293B;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #334155;
+}
+
+.combo-box-popup .list-cell:filled:selected {
+    -fx-background-color: #0C4A6E;
+    -fx-text-fill: #F8FAFC;
+}
+
+/* Botões */
+.button {
+    -fx-background-color: #263449;
+    -fx-text-fill: #E2E8F0;
+    -fx-border-color: #334155;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #334155;
+}
+
+.button:pressed {
+    -fx-background-color: #1E293B;
+}
+
+/* Botão de ação principal (Iniciar / Pausar) */
+.button.primary {
+    -fx-background-color: #0EA5E9;
+    -fx-border-color: #38BDF8;
+    -fx-text-fill: #0B1120;
+    -fx-font-weight: bold;
+}
+
+.button.primary:hover {
+    -fx-background-color: #38BDF8;
+}
+
+.button.primary:pressed {
+    -fx-background-color: #0284C7;
+}
+
+/* Slider */
+.slider .track {
+    -fx-background-color: #334155;
+    -fx-background-radius: 3;
+}
+
+.slider .thumb {
+    -fx-background-color: #38BDF8;
+    -fx-background-radius: 8;
+}
+
+.slider .thumb:hover {
+    -fx-background-color: #7DD3FC;
+}
+
+/* Cena 3D */
+.scene-pane {
+    -fx-background-color: #0B1120;
+}
+
+/* Gráfico WIP */
+.dark-chart {
+    -fx-background-color: #0B1120;
+    -fx-padding: 10;
+}
+
+.chart {
+    -fx-background-color: #0B1120;
+}
+
+.chart-content {
+    -fx-background-color: #0B1120;
+}
+
+.chart-plot-background {
+    -fx-background-color: #151F32;
+}
+
+.chart-vertical-grid-lines,
+.chart-horizontal-grid-lines {
+    -fx-stroke: #263449;
+}
+
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+}
+
+.chart-alternative-row-visible {
+    -fx-stroke: transparent;
+}
+
+/* Linha do WIP */
+.chart-series-line {
+    -fx-stroke: #38BDF8;
+    -fx-stroke-width: 2.5px;
+}
+
+/* Eixos */
+.axis {
+    -fx-tick-label-fill: #94A3B8;
+}
+
+.axis:bottom {
+    -fx-border-color: #334155 transparent transparent transparent;
+}
+
+.axis:left {
+    -fx-border-color: transparent #334155 transparent transparent;
+}
+
+.axis-label {
+    -fx-text-fill: #CBD5E1;
+}
+
+.axis-tick-mark,
+.axis-minor-tick-mark {
+    -fx-stroke: #475569;
+}
+
+/* Status do botão Salvar execução */
+.success-label {
+    -fx-text-fill: #4ADE80;
+}
+
+.error-label {
+    -fx-text-fill: #F87171;
+}
+
+/* Campo de texto e barra de progresso */
+.text-field {
+    -fx-background-color: #1E293B;
+    -fx-text-fill: #E2E8F0;
+    -fx-prompt-text-fill: #64748B;
+    -fx-border-color: #334155;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.text-field:focused {
+    -fx-border-color: #38BDF8;
+}
+
+.progress-bar > .track {
+    -fx-background-color: #263449;
+    -fx-background-radius: 3;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: #38BDF8;
+    -fx-background-radius: 3;
+    -fx-background-insets: 0;
+}
+
+/* Janela de experimentos: título, legenda e cores das séries.
+   Séries 0 e 1 são as curvas teóricas (melhor caso tracejado, PWC pontilhado); 2 em diante são os cv medidos. */
+.experiment-chart .chart-title {
+    -fx-text-fill: #E2E8F0;
+    -fx-font-weight: bold;
+}
+
+.experiment-chart .chart-legend {
+    -fx-background-color: transparent;
+}
+
+.experiment-chart .chart-legend-item {
+    -fx-text-fill: #CBD5E1;
+}
+
+.experiment-chart .default-color0.chart-series-line {
+    -fx-stroke: #94A3B8;
+    -fx-stroke-width: 1.8px;
+    -fx-stroke-dash-array: 10 6;
+}
+
+.experiment-chart .default-color1.chart-series-line {
+    -fx-stroke: #64748B;
+    -fx-stroke-width: 2px;
+    -fx-stroke-dash-array: 2 6;
+}
+
+.experiment-chart .default-color2.chart-series-line { -fx-stroke: #38BDF8; }
+.experiment-chart .default-color3.chart-series-line { -fx-stroke: #4ADE80; }
+.experiment-chart .default-color4.chart-series-line { -fx-stroke: #FACC15; }
+.experiment-chart .default-color5.chart-series-line { -fx-stroke: #FB923C; }
+.experiment-chart .default-color6.chart-series-line { -fx-stroke: #F472B6; }
+.experiment-chart .default-color7.chart-series-line { -fx-stroke: #A78BFA; }
+
+.experiment-chart .default-color0.chart-legend-item-symbol { -fx-background-color: #94A3B8; }
+.experiment-chart .default-color1.chart-legend-item-symbol { -fx-background-color: #64748B; }
+.experiment-chart .default-color2.chart-legend-item-symbol { -fx-background-color: #38BDF8; }
+.experiment-chart .default-color3.chart-legend-item-symbol { -fx-background-color: #4ADE80; }
+.experiment-chart .default-color4.chart-legend-item-symbol { -fx-background-color: #FACC15; }
+.experiment-chart .default-color5.chart-legend-item-symbol { -fx-background-color: #FB923C; }
+.experiment-chart .default-color6.chart-legend-item-symbol { -fx-background-color: #F472B6; }
+.experiment-chart .default-color7.chart-legend-item-symbol { -fx-background-color: #A78BFA; }
+
+/* Janela de consultas SQL: editor, tabela e cores dos gráficos */
+.text-area {
+    -fx-background-color: #1E293B;
+    -fx-control-inner-background: #0F172A;
+    -fx-text-fill: #E2E8F0;
+    -fx-highlight-fill: #0C4A6E;
+    -fx-border-color: #334155;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.text-area:focused {
+    -fx-border-color: #38BDF8;
+}
+
+.sql-editor {
+    -fx-font-family: "Consolas", "Menlo", monospace;
+    -fx-font-size: 13px;
+}
+
+.list-view {
+    -fx-background-color: #0F172A;
+    -fx-control-inner-background: #0F172A;
+    -fx-border-color: #334155;
+}
+
+.list-view .list-cell {
+    -fx-text-fill: #E2E8F0;
+    -fx-background-color: transparent;
+}
+
+.list-view .list-cell:filled:selected {
+    -fx-background-color: #0C4A6E;
+    -fx-text-fill: #F8FAFC;
+}
+
+.table-view {
+    -fx-background-color: #0F172A;
+    -fx-control-inner-background: #0F172A;
+    -fx-control-inner-background-alt: #111C30;
+    -fx-table-cell-border-color: #1F2A3D;
+    -fx-border-color: #334155;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1E293B;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #1E293B;
+    -fx-border-color: #334155;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #CBD5E1;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-text-background-color: #E2E8F0;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0C4A6E;
+}
+
+.split-pane {
+    -fx-background-color: transparent;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: #1F2A3D;
+    -fx-padding: 0 0 2 0;
+}
+
+.query-chart .chart-legend {
+    -fx-background-color: transparent;
+}
+
+.query-chart .chart-legend-item {
+    -fx-text-fill: #CBD5E1;
+}
+
+.query-chart .default-color0.chart-series-line { -fx-stroke: #38BDF8; }
+.query-chart .default-color1.chart-series-line { -fx-stroke: #4ADE80; }
+.query-chart .default-color2.chart-series-line { -fx-stroke: #FACC15; }
+.query-chart .default-color3.chart-series-line { -fx-stroke: #FB923C; }
+.query-chart .default-color4.chart-series-line { -fx-stroke: #F472B6; }
+.query-chart .default-color5.chart-series-line { -fx-stroke: #A78BFA; }
+
+.query-chart .default-color0.chart-bar { -fx-bar-fill: #38BDF8; }
+.query-chart .default-color1.chart-bar { -fx-bar-fill: #4ADE80; }
+.query-chart .default-color2.chart-bar { -fx-bar-fill: #FACC15; }
+.query-chart .default-color3.chart-bar { -fx-bar-fill: #FB923C; }
+.query-chart .default-color4.chart-bar { -fx-bar-fill: #F472B6; }
+.query-chart .default-color5.chart-bar { -fx-bar-fill: #A78BFA; }
+
+.query-chart .default-color0.chart-symbol,
+.query-chart .default-color0.chart-legend-item-symbol { -fx-background-color: #38BDF8; }
+.query-chart .default-color1.chart-symbol,
+.query-chart .default-color1.chart-legend-item-symbol { -fx-background-color: #4ADE80; }
+.query-chart .default-color2.chart-symbol,
+.query-chart .default-color2.chart-legend-item-symbol { -fx-background-color: #FACC15; }
+.query-chart .default-color3.chart-symbol,
+.query-chart .default-color3.chart-legend-item-symbol { -fx-background-color: #FB923C; }
+.query-chart .default-color4.chart-symbol,
+.query-chart .default-color4.chart-legend-item-symbol { -fx-background-color: #F472B6; }
+.query-chart .default-color5.chart-symbol,
+.query-chart .default-color5.chart-legend-item-symbol { -fx-background-color: #A78BFA; }
