@@ -109,6 +109,10 @@ O `Headless` imprime a mesma média no terminal, com o desvio do atraso (σ) ent
 banco é o resumo de cada execução e todas as operações; o WIP ao longo do tempo e o ciclo por lote não
 são salvos, e os experimentos de WIP × cv saem só em CSV.
 
+## Vídeo de demonstração 
+
+https://github.com/user-attachments/assets/dd318c32-9efa-46a7-bd9e-b965664abcc7
+
 ## Estrutura
 
 ```
